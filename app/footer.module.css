@@ -1,0 +1,21 @@
+.FooterContainer{
+    display: flex;
+    align-items: center;
+    background-image: url('/imgHeader/FooterBackground.png');
+    height: 280px;
+}
+.Grid{
+    display: flex;
+    justify-content: space-between;
+    width: 1140px;
+    margin: 0 auto;
+}
+.FooterLogo{
+    display: flex;
+}
+.FooterText{
+    font-family: 'Montserrat';
+    font-size: 16px;
+    padding-left: 35px;
+    color: #a7a8a8;
+}

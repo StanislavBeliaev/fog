@@ -1,0 +1,44 @@
+.TaskForStreamContainer{
+    background-image: url("/imgHeader/foggyAndCreatures.png");
+    height: 721px;
+    background-position: 0% 99%;
+    padding-top: 25px;
+    background-size: cover;
+    
+}
+.TaskForStreamLogoContainer{
+   display: flex;
+   justify-content: center;
+
+}
+.TaskForStreamText{
+    display: flex;
+    justify-content: center;
+    width: 1140px;
+    margin: 0 auto;
+}
+.TaskForStreamButtonContainer{
+    display: flex;
+    justify-content: center;
+    width: 1140px;
+    margin: 0 auto;
+    padding-top: 35px;
+}
+.TaskButton{
+    width: 360px;
+    height: 95px;
+    background-color: #fec631;
+    border: none;
+    border-radius: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.TaskButton:hover{
+    cursor: pointer;
+}
+
+.TextTaskButton{
+    font-family: 'MontserratBold';
+    font-size: 24px;
+    color: #2c2525;
+}

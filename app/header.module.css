@@ -1,0 +1,69 @@
+.HeaderTopContainer {
+    background-image: url("/imgHeader/headerTop.png");
+    width: 100%;
+    height: 118px;
+}
+.HeaderBottomContainer {
+    background-image: url("/imgHeader/headerBottom.png");
+    width: 100%;
+    height: 143px;
+}
+
+.HeaderGridTop {
+    display: flex;
+    width: 1140px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    height: 118px;
+}
+.HeaderGridBottom{
+    display: flex;
+    width: 1140px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    height: 143px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.HeaderTextContainer{
+    width: 131px;
+    height: 17px;
+}
+.HeaderText {
+    font-family: "Montserrat";
+    color: #5f5e5f;
+}
+
+.HeaderSVG {
+    width: 314px;
+}
+
+.SVGIconsContainer{
+    display: flex;
+    padding-right: 24px;
+}
+.SVGIcons{
+    display: flex;
+    padding-right: 31px;
+}
+.FoggySVG{
+    display: flex;
+    margin-left: 124px;
+}
+.Button{
+    height: 39px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-family: 'Montserrat';
+    color: #dfdede;
+    padding-left:10px;
+    padding-right: 10px;
+}
+.Button:hover{
+    background-color: #ffca33;
+    color: #100b0c;
+    border-radius: 7px;
+}

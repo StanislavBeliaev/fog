@@ -1,0 +1,25 @@
+.TasksAndStrategyContainer{
+    background-image: url('/imgHeader/masthead_1600x1600.png');
+    background-size: cover;
+    height: 1240px;
+}
+.Grid{
+    width: 1140px;
+    margin: 0 auto;
+}
+.titleContainer{
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+}
+.titleText{
+    color: #ffffff;
+    font-family: 'MontserratBold';
+    font-size: 75px;
+}
+.TableContainer{
+    background-image: url('/imgHeader/Rectangle 5.png');
+    width: 1100px;
+    height: 900px;
+    margin-top: 70px;
+}

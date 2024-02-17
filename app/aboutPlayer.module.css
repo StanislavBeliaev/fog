@@ -1,0 +1,91 @@
+.AboutPlayerContainer {
+    background-image: url('/imgHeader/info-bg.webp');
+    background-size: cover;
+    max-height: 1522px;
+    display: flex;
+}
+
+.Grid {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.Heading {
+    color: #ffffff;
+    font-family: 'MontserratBold';
+    font-size: 74px;
+    height: 74px;
+}
+
+.HeadingTextContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.PlayerName {
+    font-family: 'MontserratBold';
+    font-size: 44px;
+    color: #ffca33;
+    padding-top: 100px;
+}
+.PlayerFacts{
+    color: #bab9b9; 
+    font-family: 'Montserrat';
+    font-size: 24px;
+    list-style-type: disc; 
+    padding-left: 33px;
+    padding-top: 20px;
+}
+.UlContainer{
+    display: flex;
+}
+.StreamLinkText{
+    font-family: 'MontserratBold';
+    font-size: 44px;
+    color: #ffffff;
+}
+.StreamLinkTextContainer{
+    padding-top: 75px;
+}
+.StreamLinks{
+    padding-top: 40px;
+}
+.HelpUkraineText{
+    color: #ffffff;
+    font-family: 'MontserratBold';
+    font-size: 24px;
+    word-wrap: break-word;
+    width: 510px;
+}
+.HelpUkraineLinks{
+    width: 605px;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    word-wrap: break-word;
+}
+.HelpUkraineLinksContainer{
+    padding-top: 40px;
+}
+.SubscribeText{
+    color: #ffffff;
+    font-family: 'MontserratBold';
+    font-size: 24px;
+    word-wrap: break-word;
+    width: 605px;
+}
+.SubscribeContainer{
+    padding-top: 60px;
+}
+.DonateLinks{
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    width: 425px;
+    padding-top: 20px;
+}
+.HelpUkraineTextContainer{
+    padding-top: 50px;
+}
