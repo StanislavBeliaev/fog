@@ -36,4 +36,9 @@
     display: flex;
     justify-content: center;
     padding-top: 130px;
+    
+}
+.YoutubePlayer{
+    border: 10px solid #333639;
+    border-radius: 9px;
 }

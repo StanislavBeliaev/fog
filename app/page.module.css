@@ -7,3 +7,33 @@
 /* .TaskForStreamComponent{
     display: flex;
 } */
+.ScrollButtonContainer {
+    position: fixed;
+    top: 50%;
+    left: -70px; /* Изначальное положение с левого края */
+    transform: translateY(-50%);
+    transition: left 0.3s ease-in-out;
+  }
+  
+  .ScrollButtonContainer.Show {
+    left: 20px; /* Положение с левого края при показе кнопки */
+  }
+  
+  .ScrollButtonContainer.Hide {
+    left: -70px; /* Изначальное положение с левого края при скрытии кнопки */
+  }
+  
+  .ScrollButton {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .ScrollButton:hover {
+    background-color: #0056b3;
+  }
+  
+  

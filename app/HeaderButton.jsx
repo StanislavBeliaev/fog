@@ -1,7 +1,7 @@
 import React from "react";
 
-export const HeaderButton = ({children, className}) =>{
+export const HeaderButton = ({children, className, onClick}) =>{
     return(
-        <button className={className}>{children}</button>
+        <button onClick={onClick} className={className}>{children}</button>
     )
 }

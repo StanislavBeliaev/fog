@@ -31,61 +31,81 @@
     color: #ffca33;
     padding-top: 100px;
 }
-.PlayerFacts{
-    color: #bab9b9; 
+
+.PlayerFacts {
+    color: #bab9b9;
     font-family: 'Montserrat';
     font-size: 24px;
-    list-style-type: disc; 
+    list-style-type: disc;
     padding-left: 33px;
     padding-top: 20px;
 }
-.UlContainer{
+
+.UlContainer {
     display: flex;
 }
-.StreamLinkText{
+
+.StreamLinkText {
     font-family: 'MontserratBold';
     font-size: 44px;
     color: #ffffff;
 }
-.StreamLinkTextContainer{
+
+.StreamLinkTextContainer {
     padding-top: 75px;
 }
-.StreamLinks{
+
+.StreamLinks {
     padding-top: 40px;
 }
-.HelpUkraineText{
+
+.HelpUkraineText {
     color: #ffffff;
     font-family: 'MontserratBold';
     font-size: 24px;
     word-wrap: break-word;
     width: 510px;
 }
-.HelpUkraineLinks{
+
+.HelpUkraineLinks {
     width: 605px;
     font-size: 20px;
     font-family: 'Montserrat';
     word-wrap: break-word;
 }
-.HelpUkraineLinksContainer{
+
+.HelpUkraineLinksContainer {
     padding-top: 40px;
 }
-.SubscribeText{
+
+.SubscribeText {
     color: #ffffff;
     font-family: 'MontserratBold';
     font-size: 24px;
     word-wrap: break-word;
     width: 605px;
 }
-.SubscribeContainer{
+
+.SubscribeContainer {
     padding-top: 60px;
 }
-.DonateLinks{
+
+.DonateLinks {
     display: flex;
     flex-direction: column;
     word-wrap: break-word;
     width: 425px;
     padding-top: 20px;
 }
-.HelpUkraineTextContainer{
+
+.HelpUkraineTextContainer {
     padding-top: 50px;
+}
+
+.DonateLinksStyle {
+    padding-top: 10px;
+    font-size: 20px;
+}
+.DonateLinksStyle:hover{
+    color: blue;
 }

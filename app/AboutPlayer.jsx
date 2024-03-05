@@ -1,6 +1,6 @@
 import React from "react";
 import classes from './aboutPlayer.module.css'
-export const AboutPlayer = () => {
+export const AboutPlayer = ({ section3Ref: AboutPlayerRef }) => {
     const imgStyle = {
         position: 'absolute',
         marginLeft: '760px',
@@ -29,7 +29,7 @@ export const AboutPlayer = () => {
         paddingTop: '10px',
     }
     return (
-        <div className={classes.AboutPlayerContainer}>
+        <div ref={AboutPlayerRef} className={classes.AboutPlayerContainer}>
             <div className={classes.Grid}>
                 <div className={classes.HeadingTextContainer}>
                     <h1 className={classes.Heading}>ПРО ГРАВЦЯ</h1>
@@ -48,25 +48,29 @@ export const AboutPlayer = () => {
                     <p className={classes.StreamLinkText}>СТРІМ ТА ЗАПИСИ </p>
                 </div>
                 <div className={classes.StreamLinks}>
-                    <img style={imgTw} src="/imgHeader/tw.svg" alt="" />
-                    <img style={imgYt} src="/imgHeader/yt.svg" alt="" />
+                    <a href="https://www.twitch.tv/foggywc3">
+                        <img style={imgTw} src="/imgHeader/tw.svg" alt="" />
+                    </a>
+                    <a href="https://www.youtube.com/foggywc3">
+                        <img style={imgYt} src="/imgHeader/yt.svg" alt="" />
+                    </a>
                 </div>
                 <div className={classes.HelpUkraineTextContainer}>
                     <p className={classes.HelpUkraineText}>Організатор та учасник серії матчів на підтримку України</p>
                 </div>
                 <div className={classes.HelpUkraineLinksContainer}>
                     <p className={classes.HelpUkraineLinks}>
-                        <a style={DonateLinksStyle} href="https://liquipedia.net/warcraft/Help_Ukraine/1">HelpUkraine1, </a>
-                        <a style={DonateLinksStyle} href="https://liquipedia.net/warcraft/Help_Ukraine/2">HelpUkraine2, </a>
+                        <a className={classes.DonateLinksStyle} href="https://liquipedia.net/warcraft/Help_Ukraine/1">HelpUkraine1, </a>
+                        <a className={classes.DonateLinksStyle} href="https://liquipedia.net/warcraft/Help_Ukraine/2">HelpUkraine2, </a>
 
-                        <a style={DonateLinksStyle} href="https://liquipedia.net/warcraft/Help_Ukraine_League">HelpUkraine3, </a>
+                        <a className={classes.DonateLinksStyle} href="https://liquipedia.net/warcraft/Help_Ukraine_League">HelpUkraine3, </a>
 
-                        <a style={DonateLinksStyle} href="https://liquipedia.net/warcraft/Ukrainian_WC3/Season_1">StanWithUkraine, </a>
+                        <a className={classes.DonateLinksStyle} href="https://liquipedia.net/warcraft/Ukrainian_WC3/Season_1">StandWithUkraine, </a>
 
-                        <a style={DonateLinksStyle} href="https://stand-with-ukraine-h3.com.ua/season2">StanWithUkraine2, </a>
+                        <a className={classes.DonateLinksStyle} href="https://stand-with-ukraine-h3.com.ua/season2">StandWithUkraine2, </a>
 
-                        <a style={DonateLinksStyle} href="https://stand-with-ukraine-h3.com.ua/season3">StanWithUkraine3, </a>
-                        <a style={DonateLinksStyle} href="https://stand-with-ukraine-h3.com.ua/season4">StanWithUkraine4</a>
+                        <a className={classes.DonateLinksStyle} href="https://stand-with-ukraine-h3.com.ua/season3">StandWithUkraine3, </a>
+                        <a className={classes.DonateLinksStyle} href="https://stand-with-ukraine-h3.com.ua/season4">StandWithUkraine4</a>
                     </p>
                 </div>
                 <div className={classes.SubscribeContainer}>
@@ -77,7 +81,7 @@ export const AboutPlayer = () => {
                         <a style={DonateLinksStyle} href="http://">Платна підписка - Twitch Sub</a>
                         <a style={DonateLinksStyle} href="https://donatello.to/foggywc3">Donatello</a>
                         <p style={DonateRef}>PayPal: andrijkorenj@gmail.com</p>
-                        <p style={{...DonateRef, paddingBottom: '70px'}}>Binance Pay ID: 449074052</p>
+                        <p style={{ ...DonateRef, paddingBottom: '70px' }}>Binance Pay ID: 449074052</p>
                     </div>
                 </div>
             </div>

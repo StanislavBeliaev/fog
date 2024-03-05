@@ -5,9 +5,9 @@ import { HeaderButton } from "./HeaderButton"
 
 
 
-export const Header = () => {
+export const Header = ({ section1Ref, section2Ref, section3Ref, section4Ref: TaskAndStrategyRef, scrollToSection }) => {
     return (
-        <div className={classes.HeaderTopContainer}>
+        <div ref={section1Ref} className={classes.HeaderTopContainer}>
             <div className={classes.HeaderGridTop}>
                 <div className={classes.HeaderTextContainer}>
                     <p className={classes.HeaderText}>Слава Україні!</p>
@@ -17,11 +17,14 @@ export const Header = () => {
                 </div>
                 <div className={classes.SVGIconsContainer}>
                     <div className={classes.SVGIcons}>
-                        <TwitterSVG />
+                        <a href="https://twitter.com/foggywc3">
+                            <TwitterSVG />
+                        </a>
                     </div>
                     <div className={classes.SVGIcons}>
-
-                        <FaceBookSVG />
+                        <a href="https://www.facebook.com/foggywc3">
+                            <FaceBookSVG />
+                        </a>
                     </div>
                     <div className={classes.SVGIcons}>
                         <PinterestSVG />
@@ -34,13 +37,13 @@ export const Header = () => {
             <div className={classes.HeaderBottomContainer}>
                 <div className={classes.HeaderGridBottom}>
 
-                    <HeaderButton className={classes.Button}><p>ПРО ГРАВЦЯ</p></HeaderButton>
+                    <HeaderButton onClick={() => scrollToSection(section3Ref)} className={classes.Button}><p>ПРО ГРАВЦЯ</p></HeaderButton>
 
-                    <HeaderButton className={classes.Button}><p>ЩО ТАКЕ TOP1 BATTLE.NET</p></HeaderButton>
+                    <HeaderButton onClick={() => scrollToSection(section2Ref)} className={classes.Button}><p>ЩО ТАКЕ TOP1 BATTLE.NET</p></HeaderButton>
 
-                    <HeaderButton className={classes.Button}><p>ЗАВДАННЯ-СТРАТЕГІЇ</p></HeaderButton>
+                    <HeaderButton onClick={() => scrollToSection(TaskAndStrategyRef)} className={classes.Button}><p>ЗАВДАННЯ-СТРАТЕГІЇ</p></HeaderButton>
 
-                    <HeaderButton className={classes.Button}><p>ЗАМОВИТИ ЗАВДАННЯ</p></HeaderButton>
+                    <HeaderButton onClick={() => scrollToSection(section3Ref)} className={classes.Button}><p>ЗАМОВИТИ ЗАВДАННЯ</p></HeaderButton>
                 </div>
             </div>
         </div>
