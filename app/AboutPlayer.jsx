@@ -28,6 +28,16 @@ export const AboutPlayer = ({ section3Ref: AboutPlayerRef }) => {
         fontSize: '20px',
         paddingTop: '10px',
     }
+    const donateLinks = [
+        { label: "HelpUkraine1, ", link: "https://liquipedia.net/warcraft/Help_Ukraine/1" },
+        { label: "HelpUkraine2, ", link: "https://liquipedia.net/warcraft/Help_Ukraine/2" },
+        { label: "HelpUkraine3, ", link: "https://liquipedia.net/warcraft/Help_Ukraine_League" },
+        { label: "StandWithUkraine, ", link: "https://liquipedia.net/warcraft/Ukrainian_WC3/Season_1"},
+        { label: "StandWithUkraine2, ", link: "https://stand-with-ukraine-h3.com.ua/season2" },
+        { label: "StandWithUkraine3, ", link: "https://stand-with-ukraine-h3.com.ua/season3" },
+        { label: "StandWithUkraine4, ", link: "https://stand-with-ukraine-h3.com.ua/season4" }
+    ];
+
     return (
         <div ref={AboutPlayerRef} className={classes.AboutPlayerContainer}>
             <div className={classes.Grid}>
@@ -60,17 +70,9 @@ export const AboutPlayer = ({ section3Ref: AboutPlayerRef }) => {
                 </div>
                 <div className={classes.HelpUkraineLinksContainer}>
                     <p className={classes.HelpUkraineLinks}>
-                        <a className={classes.DonateLinksStyle} href="https://liquipedia.net/warcraft/Help_Ukraine/1">HelpUkraine1, </a>
-                        <a className={classes.DonateLinksStyle} href="https://liquipedia.net/warcraft/Help_Ukraine/2">HelpUkraine2, </a>
-
-                        <a className={classes.DonateLinksStyle} href="https://liquipedia.net/warcraft/Help_Ukraine_League">HelpUkraine3, </a>
-
-                        <a className={classes.DonateLinksStyle} href="https://liquipedia.net/warcraft/Ukrainian_WC3/Season_1">StandWithUkraine, </a>
-
-                        <a className={classes.DonateLinksStyle} href="https://stand-with-ukraine-h3.com.ua/season2">StandWithUkraine2, </a>
-
-                        <a className={classes.DonateLinksStyle} href="https://stand-with-ukraine-h3.com.ua/season3">StandWithUkraine3, </a>
-                        <a className={classes.DonateLinksStyle} href="https://stand-with-ukraine-h3.com.ua/season4">StandWithUkraine4</a>
+                        {donateLinks.map((item, index) => (
+                            <a key={index} className={classes.DonateLinksStyle} href={item.link}>{item.label}</a>
+                        ))}
                     </p>
                 </div>
                 <div className={classes.SubscribeContainer}>

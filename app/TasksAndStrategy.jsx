@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import classes from './TasksAndStrategy.module.css';
 import useContentful from "./hooks/use-contentful";
+import { ModalWindow } from "./modals/ModalTask";
 const query = `
 query taskCollectionQuery {
     taskCollection {
@@ -20,8 +21,6 @@ query taskCollectionQuery {
   }`;
 
 
-
-
 export const TasksAndStrategy = ({ section4Ref }) => {
     const { dataTasks, errors } = useContentful(query);
     const [currentPage, setCurrentPage] = useState(1);
@@ -29,7 +28,7 @@ export const TasksAndStrategy = ({ section4Ref }) => {
     const [filterText, setFilterText] = useState('');
     const [statusFilter, setStatusFilter] = useState('');
     const containerHeight = 700; // Высота контейнера таблицы
-    const rowHeight = 57; // Высота строки таблицы
+    const rowHeight = 80; // Высота строки таблицы
     const itemsPerPage = Math.floor(containerHeight / rowHeight);
 
 
@@ -110,19 +109,7 @@ export const TasksAndStrategy = ({ section4Ref }) => {
                     <h1 className={classes.titleText}>ЗАВДАННЯ СТРАТЕГІЇ</h1>
                 </div>
                 <div className={classes.TableContainer}>
-                    {selectedItem && (
-                        <div className={classes.modal}>
-                            <div className={classes.modalContent}>
-                                <h2>Данные элемента</h2>
-                                <p>Task: {selectedItem.task}</p>
-                                <p>Client: {selectedItem.client}</p>
-                                <p>Amount: {selectedItem.amount}</p>
-                                <p>Complexity: {selectedItem.complexity}</p>
-                                <p>Task Status: {selectedItem.taskStatus}</p>
-                                <button onClick={() => setSelectedItem(null)}>Закрыть</button>
-                            </div>
-                        </div>
-                    )}
+                    <ModalWindow selectedItem={selectedItem} setSelectedItem={setSelectedItem} classes={classes} />
                     <div className={classes.FilterContainer}>
                         <input
                             className={classes.FilterInput}
@@ -161,10 +148,25 @@ export const TasksAndStrategy = ({ section4Ref }) => {
                                         <td className={`${classes.Td} ${classes.Description}`} onClick={() => handleItemClick(item)}>
                                             <div className={classes.DescriptionText}>{item.task}</div>
                                         </td>
-                                        <td className={classes.Td}>{item.client}</td>
-                                        <td className={classes.Td}>{item.amount}</td>
-                                        <td className={classes.Td}>{item.complexity}</td>
-                                        <td className={classes.Td}>{item.taskStatus}</td>
+                                        <td className={classes.Td}>
+                                            <div className={classes.DescriptionClient}>{item.client}</div>
+                                        </td>
+                                        <td className={classes.Td}>
+                                            <div className={classes.DescriptionAmount}>{item.amount + ' грн'}</div>
+                                        </td>
+                                        <td className={classes.Td}>
+                                            <div className={classes.DescriptionComplexity} style={{
+                                                color:
+                                                    item.complexity === 'Середній' ? '#f7941d' :
+                                                        item.complexity === 'Легкий' ? '#39b54a' :
+                                                            item.complexity === 'Складний' ? '#ff0000' : '#000000'
+                                            }}>
+                                                {item.complexity}
+                                            </div>
+                                        </td>
+                                        <td className={classes.Td}>
+                                            <div className={classes.DescriptionTaskStatus}>{item.taskStatus === "Haven't started" ? 'Не розпочато' : 'Виконано'}</div>
+                                        </td>
                                     </tr>
                                 ))
                             ) : (

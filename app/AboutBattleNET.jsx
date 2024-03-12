@@ -1,7 +1,7 @@
 'use client'
 import React from "react";
 import classes from "./AboutBattleNET.module.css"
-import { YoutubeEmbed } from "./YoutubeEmbed.";
+import { YoutubeEmbed } from "./YoutubeEmbed";
 
 export const AboutBattleNET = ({ section2Ref: AboutBattleNETRef }) => {
     const spanStyle = {

@@ -54,6 +54,10 @@
     font-size: 16px;
     margin-top: 10px;
     margin-bottom: 10px;
+    width: 507px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
 }
 
 .FilterContainer {
@@ -119,6 +123,7 @@
     position: relative;
     top: -55px;
 }
+
 .active {
     background: transparent;
     background-image: url('/imgHeader/ActiveButton.png');
@@ -127,6 +132,7 @@
     height: 52px;
     border: none;
 }
+
 .inactive {
     background: transparent;
     background-image: url('/imgHeader/DisButton.png');
@@ -135,7 +141,8 @@
     height: 52px;
     border: none;
 }
-.PaginationButton{
+
+.PaginationButton {
     background: transparent;
     background-image: url('/imgHeader/ActiveButton.png');
     background-size: cover;
@@ -143,12 +150,51 @@
     height: 52px;
     border: none;
 }
-.PaginationButtonContainer{
+
+.PaginationButtonContainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 370px;
 }
-.TableTr{
-    height: 57px;
+
+.TableTr {
+    height: 80px;
+}
+
+.DescriptionClient {
+    width: 125px;
+    font-family: 'MontserratBold';
+    font-size: 20px;
+    color: #0072bc;
+    max-width: 150px;
+    text-align: center;
+}
+
+.DescriptionAmount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    font-size: 16px;
+    font-family: 'Montserrat';
+    color: #fff200;
+}
+
+.DescriptionComplexity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    font-size: 16px;
+    font-family: 'MontserratBold';
+
+}
+
+.DescriptionTaskStatus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    font-family: 'MontserratBold';
 }

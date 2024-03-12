@@ -18,4 +18,6 @@
     font-size: 16px;
     padding-left: 35px;
     color: #a7a8a8;
+    display: flex;
+    flex-direction: column;
 }

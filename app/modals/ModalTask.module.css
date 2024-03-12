@@ -1,0 +1,106 @@
+.Modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    /* Установите необходимый z-index, чтобы модальное окно было поверх других элементов */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Добавьте полупрозрачный фон */
+    width: 400px;
+    /* Установите ширину модального окна */
+    padding: 20px;
+    border-radius: 8px;
+    color: #ffffff;
+    /* Установите цвет текста */
+    background-image: url('/imgHeader/bg-modal.png');
+    width: 608px;
+    height: 682px;
+}
+
+.ModalContent {
+
+    /* Добавьте стили для контента модального окна, если необходимо */
+}
+
+.CloseButton {
+    position: absolute;
+    top: 50px;
+    right: 40px;
+    cursor: pointer;
+    color: #ffffff;
+    background: none;
+    background-image: url('/imgHeader/close_btn.png');
+    width: 20px;
+    height: 21px;
+    border: none;
+    /* Установите цвет кнопки закрытия */
+}
+
+.ModalName {
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+    font-family: 'MontserratBold';
+    font-size: 32px;
+    color: #ffca33;
+    height: 95px;
+    align-items: center;
+}
+
+.ModalTask {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 155px;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    padding-left: 35px;
+    padding-right: 35px;
+    word-wrap: anywhere;
+}
+
+.ModalClientAmount {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    font-family: 'MontserratBold';
+    padding-left: 115px;
+    padding-right: 115px;
+    margin-top: 26px;
+}
+
+.ModalComplexityTaskStatus {
+    display: flex;
+    justify-content: space-between;
+    height: 110px;
+    align-items: center;
+    font-family: 'MontserratBold';
+    padding-left: 115px;
+    padding-right: 115px;
+}
+
+.ModalClient {
+    display: flex;
+    flex-direction: column;
+}
+.ModalClientText{
+    font-family: 'MontserratBold';
+    font-size: 22px;
+    color: #0567a5;
+}
+
+.ModalAmount{
+    display: flex;
+    color: #ffca33;
+    width: 100px;
+}
+.ModalComplexity{
+    display: flex;
+    flex-direction: column;
+}
+.ModalTaskStatus{
+    display: flex;
+    flex-direction: column;
+}
