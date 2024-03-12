@@ -32,7 +32,7 @@ export const AboutPlayer = ({ section3Ref: AboutPlayerRef }) => {
         { label: "HelpUkraine1, ", link: "https://liquipedia.net/warcraft/Help_Ukraine/1" },
         { label: "HelpUkraine2, ", link: "https://liquipedia.net/warcraft/Help_Ukraine/2" },
         { label: "HelpUkraine3, ", link: "https://liquipedia.net/warcraft/Help_Ukraine_League" },
-        { label: "StandWithUkraine, ", link: "https://liquipedia.net/warcraft/Ukrainian_WC3/Season_1"},
+        { label: "StandWithUkraine, ", link: "https://liquipedia.net/warcraft/Ukrainian_WC3/Season_1" },
         { label: "StandWithUkraine2, ", link: "https://stand-with-ukraine-h3.com.ua/season2" },
         { label: "StandWithUkraine3, ", link: "https://stand-with-ukraine-h3.com.ua/season3" },
         { label: "StandWithUkraine4, ", link: "https://stand-with-ukraine-h3.com.ua/season4" }
@@ -53,7 +53,7 @@ export const AboutPlayer = ({ section3Ref: AboutPlayerRef }) => {
                         <li style={DonateLinksStyle}>Родом з міста Львів. Зараз проживаю в Сакартвело</li>
                     </ul>
                 </div>
-                <img style={imgStyle} src="/imgHeader/foggy-pic.webp"></img>
+                <img style={imgStyle} src="/imgHeader/foggy-pic.webp" alt="" />
                 <div className={classes.StreamLinkTextContainer}>
                     <p className={classes.StreamLinkText}>СТРІМ ТА ЗАПИСИ </p>
                 </div>

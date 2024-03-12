@@ -8,19 +8,9 @@ import { SectionLine } from "./SectionLine";
 import { TaskForStream } from "./TaskForStream";
 import { TasksAndStrategy } from "./TasksAndStrategy";
 import classes from "./page.module.css"
-// import { useQuery, gql } from '@apollo/client';
 
-// const GET_TASKS = gql`
-// query {
-//   taskCollection{
-//     items{
-//       task
-//     }
-//   }
-// }`;
 export default function Home() {
-  // const dataGQL = useQuery(GET_TASKS)
-  
+
   const style = {
     height: '16px'
   }

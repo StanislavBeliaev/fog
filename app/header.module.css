@@ -67,47 +67,4 @@
     color: #100b0c;
     border-radius: 7px;
 }
-@media only screen and (max-width: 768px) {
-    .HeaderTopContainer {
-        height: auto; /* Снимаем фиксированную высоту */
-    }
 
-    .HeaderBottomContainer {
-        height: auto; /* Снимаем фиксированную высоту */
-        padding-top: 20px; /* Увеличиваем внешний отступ сверху */
-        padding-bottom: 20px; /* Увеличиваем внешний отступ снизу */
-    }
-
-    .HeaderGridTop, .HeaderGridBottom {
-        width: 100%; /* Ширина 100% на мобильных устройствах */
-        padding-left: 20px; /* Увеличиваем внешний отступ слева */
-        padding-right: 20px; /* Увеличиваем внешний отступ справа */
-    }
-
-    .HeaderTextContainer {
-        width: auto; /* Снимаем фиксированную ширину */
-    }
-
-    .HeaderSVG {
-        width: 200px; /* Уменьшаем ширину логотипа на мобильных устройствах */
-    }
-
-    .FoggySVG {
-        margin-left: 20px; /* Уменьшаем внутренний отступ слева */
-    }
-
-    .SVGIconsContainer {
-        padding-right: 0; /* Убираем правый внутренний отступ */
-        justify-content: flex-end; /* Выравниваем иконки по правому краю */
-    }
-
-    .SVGIcons {
-        padding-right: 15px; /* Уменьшаем внутренний отступ между иконками */
-    }
-
-    .Button {
-        font-size: 14px; /* Уменьшаем размер шрифта кнопок на мобильных устройствах */
-        padding-left: 5px; /* Уменьшаем внутренний отступ слева */
-        padding-right: 5px; /* Уменьшаем внутренний отступ справа */
-    }
-}

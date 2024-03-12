@@ -4,24 +4,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000;
-    /* Установите необходимый z-index, чтобы модальное окно было поверх других элементов */
     background-color: rgba(0, 0, 0, 0.5);
-    /* Добавьте полупрозрачный фон */
     width: 400px;
-    /* Установите ширину модального окна */
     padding: 20px;
     border-radius: 8px;
     color: #ffffff;
-    /* Установите цвет текста */
     background-image: url('/imgHeader/bg-modal.png');
     width: 608px;
     height: 682px;
 }
 
-.ModalContent {
-
-    /* Добавьте стили для контента модального окна, если необходимо */
-}
 
 .CloseButton {
     position: absolute;
@@ -34,7 +26,6 @@
     width: 20px;
     height: 21px;
     border: none;
-    /* Установите цвет кнопки закрытия */
 }
 
 .ModalName {

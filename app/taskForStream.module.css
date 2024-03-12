@@ -70,38 +70,3 @@
 .battleNET {
     margin-left: 15px
 }
-
-
-@media (max-width: 768px) {
-    .TaskForStreamContainer {
-        background-image: url("/imgHeader/main-pic.webp");
-        height: auto; /* Автоматическая высота контейнера */
-        padding-top: 15px; /* Уменьшаем верхний внутренний отступ */
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center; /* Центрируем фоновое изображение */
-    }
-
-    .TaskForStreamText {
-        width: 90%; /* Занимает 90% ширины родительского контейнера */
-        padding: 20px 5%; /* Внутренние отступы по вертикали 20px, по горизонтали 5% */
-    }
-
-    .TaskForStreamButtonContainer {
-        padding-bottom: 35px; /* Добавляем нижний внутренний отступ */
-    }
-
-    .TaskButton {
-        width: 80%; /* Занимает 80% ширины родительского контейнера */
-        max-width: 360px; /* Максимальная ширина 360px */
-    }
-
-    .textStyle {
-        font-size: 30px; /* Размер текста */
-        padding: 20px 0; /* Внутренние отступы по вертикали 20px, по горизонтали 0 */
-    }
-
-    .yellowTextStyle {
-        font-size: 30px; /* Размер текста */
-    }
-}
