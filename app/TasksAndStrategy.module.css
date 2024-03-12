@@ -7,6 +7,8 @@
 .Grid {
     width: 1140px;
     margin: 0 auto;
+    background-size: 1140px;
+    background-repeat: no-repeat;
 }
 
 .titleContainer {
@@ -22,16 +24,18 @@
 }
 
 .TableContainer {
-    background-image: url('/imgHeader/Rectangle 5.png');
-    width: 1100px;
-    height: 900px;
+    background-image: url('/imgHeader/bg+.png');
+    width: 1140px;
+    height: 950px;
     margin-top: 70px;
 }
 
 .Table {
     color: #ffffff;
     border-collapse: collapse;
-    width: 100%;
+    margin-left: 55px;
+    margin-right: 55px;
+    max-height: 750px;
 }
 
 .Td {
@@ -48,5 +52,103 @@
     overflow: hidden;
     word-wrap: break-word;
     font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
+.FilterContainer {
+    padding-top: 55px;
+    padding-bottom: 26px;
+    padding-left: 60px;
+}
+
+.FilterInput {
+    width: 300px;
+    height: 45px;
+    padding-left: 10px;
+    border-radius: 15px;
+    font-size: 16px;
+    border-color: #3f3b3d;
+    background: transparent;
+    color: #6b6867;
+}
+
+.FilterSelect {
+    position: relative;
+    max-width: 165px;
+    height: 45px;
+    margin-left: 21px;
+    padding-right: 10px;
+    border-radius: 15px;
+    border-color: #3f3b3d;
+    background: #544c4a;
+    color: #6b6867;
+    font-size: 16px;
+
+    background-image: url('/imgHeader/ArrowBottom.png');
+    background-size: 21px;
+    background-repeat: no-repeat;
+    background-position-x: 15px;
+    background-position-y: center;
+
+    padding-left: 45px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.FilterSelectOption1 {
+    color: #ffffff;
+}
+
+.FilterSelectOption2 {
+    color: #39b54a;
+}
+
+.FilterSelectOption3 {
+    color: red;
+}
+
+.paginationContainer {
+    display: flex;
+    justify-content: center;
+    background-image: url('/imgHeader/buttonBg.png');
+    background-repeat: no-repeat;
+    height: 80px;
+    background-position: center;
+    position: relative;
+    top: -55px;
+}
+.active {
+    background: transparent;
+    background-image: url('/imgHeader/ActiveButton.png');
+    background-size: cover;
+    width: 54px;
+    height: 52px;
+    border: none;
+}
+.inactive {
+    background: transparent;
+    background-image: url('/imgHeader/DisButton.png');
+    background-size: cover;
+    width: 54px;
+    height: 52px;
+    border: none;
+}
+.PaginationButton{
+    background: transparent;
+    background-image: url('/imgHeader/ActiveButton.png');
+    background-size: cover;
+    width: 54px;
+    height: 52px;
+    border: none;
+}
+.PaginationButtonContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 370px;
+}
+.TableTr{
+    height: 57px;
+}
