@@ -58,10 +58,10 @@ export const AboutPlayer = ({ section3Ref: AboutPlayerRef }) => {
                     <p className={classes.StreamLinkText}>СТРІМ ТА ЗАПИСИ </p>
                 </div>
                 <div className={classes.StreamLinks}>
-                    <a href="https://www.twitch.tv/foggywc3">
+                    <a href="https://www.twitch.tv/foggywc3" target="_blank">
                         <img style={imgTw} src="/imgHeader/tw.svg" alt="" />
                     </a>
-                    <a href="https://www.youtube.com/foggywc3">
+                    <a href="https://www.youtube.com/foggywc3" target="_blank">
                         <img style={imgYt} src="/imgHeader/yt.svg" alt="" />
                     </a>
                 </div>
@@ -71,7 +71,7 @@ export const AboutPlayer = ({ section3Ref: AboutPlayerRef }) => {
                 <div className={classes.HelpUkraineLinksContainer}>
                     <p className={classes.HelpUkraineLinks}>
                         {donateLinks.map((item, index) => (
-                            <a key={index} className={classes.DonateLinksStyle} href={item.link}>{item.label}</a>
+                            <a key={index} className={classes.DonateLinksStyle} href={item.link} target="_blank">{item.label}</a>
                         ))}
                     </p>
                 </div>

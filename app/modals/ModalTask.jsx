@@ -1,8 +1,8 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import classes from './ModalTask.module.css'
 
 export const ModalWindow = ({ selectedItem, setSelectedItem }) => {
-    
+
     const closeModalOnEsc = (event) => {
         if (event.key === "Escape") {
             setSelectedItem(null);
@@ -24,7 +24,7 @@ export const ModalWindow = ({ selectedItem, setSelectedItem }) => {
                         <p>Назва та опис завдання</p>
                     </div>
                     <div className={classes.ModalTask}>
-                        <p>{selectedItem.task}</p>
+                        <p className={classes.ModalTaskText}>{selectedItem.task}</p>
                     </div>
                     <div className={classes.ModalClientAmount}>
                         <div className={classes.ModalClient}>
@@ -48,8 +48,13 @@ export const ModalWindow = ({ selectedItem, setSelectedItem }) => {
                         </div>
                         <div>
                             <p className={classes.ModalTaskStatus}>Статус:</p>
-                            <p style={{color: selectedItem.taskStatus === "Haven't started" ?  'red' : 'green'}}>{selectedItem.taskStatus === "Haven't started" ? 'Не розпочато' : 'Виконано'} </p>
+                            <p style={{ color: selectedItem.taskStatus === "Haven't started" ? 'red' : 'green' }}>{selectedItem.taskStatus === "Haven't started" ? 'Не розпочато' : 'Виконано'} </p>
                         </div>
+                    </div>
+                    <div className={classes.ModalStarsContainer}>
+                        {Array.from({ length: selectedItem.rating }, (_, index) => (
+                            <img className={classes.ModalStars} key={index} src="/imgHeader/starModal.png" alt="star" />
+                        ))}
                     </div>
                     <button className={classes.CloseButton} onClick={() => setSelectedItem(null)}></button>
                 </div>

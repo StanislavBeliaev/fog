@@ -1,11 +1,14 @@
 import React from "react"
 import classes from "./header.module.css"
-import { TwitterSVG, FaceBookSVG, PinterestSVG, InstargamSVG } from "./SocialMediaSVG/SocialMediaSVG"
+import { TwitterSVG, FaceBookSVG, PinterestSVG, InstargamSVG, DiscordSVG, TelegramSVG } from "./SocialMediaSVG/SocialMediaSVG"
 import { HeaderButton } from "./HeaderButton"
 
 
 
 export const Header = ({ section1Ref, section2Ref, section3Ref, section4Ref: TaskAndStrategyRef, scrollToSection }) => {
+    const redirectToDonation = () => {
+        window.open('https://donatello.to/foggywc3', '_blank');
+    }
     return (
         <div ref={section1Ref} className={classes.HeaderTopContainer}>
             <div className={classes.HeaderGridTop}>
@@ -17,20 +20,19 @@ export const Header = ({ section1Ref, section2Ref, section3Ref, section4Ref: Tas
                 </div>
                 <div className={classes.SVGIconsContainer}>
                     <div className={classes.SVGIcons}>
-                        <a href="https://twitter.com/foggywc3">
+                        <a href="https://twitter.com/foggywc3" target="_blank">
                             <TwitterSVG />
                         </a>
                     </div>
                     <div className={classes.SVGIcons}>
-                        <a href="https://www.facebook.com/foggywc3">
+                        <a href="https://www.facebook.com/foggywc3" target="_blank">
                             <FaceBookSVG />
                         </a>
                     </div>
                     <div className={classes.SVGIcons}>
-                        <PinterestSVG />
-                    </div>
-                    <div className={classes.SVGIcons}>
-                        <InstargamSVG />
+                        <a href="https://t.me/+XIxzoTY3jvNjNzcy" target="_blank">
+                            <TelegramSVG />
+                        </a>
                     </div>
                 </div>
             </div>
@@ -43,7 +45,7 @@ export const Header = ({ section1Ref, section2Ref, section3Ref, section4Ref: Tas
 
                     <HeaderButton onClick={() => scrollToSection(TaskAndStrategyRef)} className={classes.Button}><p>ЗАВДАННЯ-СТРАТЕГІЇ</p></HeaderButton>
 
-                    <HeaderButton onClick={() => scrollToSection(section3Ref)} className={classes.Button}><p>ЗАМОВИТИ ЗАВДАННЯ</p></HeaderButton>
+                    {<HeaderButton /* onClick={() => scrollToSection(section3Ref)}*/ className={classes.Button}><p>ЗАМОВИТИ ЗАВДАННЯ</p></HeaderButton>}
                 </div>
             </div>
         </div>

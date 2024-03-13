@@ -39,10 +39,18 @@
 }
 
 .Td {
-    border: 1px solid white;
+    border: 1px solid #3f3b3d;
     cursor: pointer;
     max-height: 40px;
     overflow: hidden;
+}
+.Th{
+    border: 1px solid #3f3b3d;
+    max-height: 40px;
+    overflow: hidden;
+    font-family: 'Montserrat';
+    background-color: #2a2625;
+    border-bottom: 2px solid #3f3b3d;
 }
 
 .DescriptionText {
@@ -52,6 +60,7 @@
     overflow: hidden;
     word-wrap: break-word;
     font-size: 16px;
+    font-family: 'Montserrat';
     margin-top: 10px;
     margin-bottom: 10px;
     width: 507px;
@@ -79,7 +88,7 @@
 
 .FilterSelect {
     position: relative;
-    max-width: 165px;
+    max-width: 200px;
     height: 45px;
     margin-left: 21px;
     padding-right: 10px;
@@ -88,6 +97,7 @@
     background: #544c4a;
     color: #6b6867;
     font-size: 16px;
+    font-family: 'Montserrat';
 
     background-image: url('/imgHeader/ArrowBottom.png');
     background-size: 21px;
@@ -103,14 +113,17 @@
 
 .FilterSelectOption1 {
     color: #ffffff;
+    font-family: 'Montserrat';
 }
 
 .FilterSelectOption2 {
     color: #39b54a;
+    font-family: 'Montserrat';
 }
 
 .FilterSelectOption3 {
     color: red;
+    font-family: 'Montserrat';
 }
 
 .paginationContainer {
@@ -131,6 +144,9 @@
     width: 54px;
     height: 52px;
     border: none;
+    font-family: 'MontserratBold';
+    font-size: 32px;
+    color:#ffca33;
 }
 
 .inactive {
@@ -140,6 +156,9 @@
     width: 54px;
     height: 52px;
     border: none;
+    font-family: 'MontserratBold';
+    font-size: 32px;
+    color:#ffca33;
 }
 
 .PaginationButton {
@@ -160,6 +179,7 @@
 
 .TableTr {
     height: 80px;
+    
 }
 
 .DescriptionClient {
@@ -197,7 +217,13 @@
     justify-content: center;
     width: 150px;
     font-family: 'MontserratBold';
+    flex-direction: column;
 }
+.DescriptionRating{
+    margin: -10px;
+    padding-top: 10px;
+}
+
 
 
 

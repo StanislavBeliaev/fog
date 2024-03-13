@@ -124,7 +124,7 @@ export const TasksAndStrategy = ({ section4Ref }) => {
                             onChange={handleStatusFilterChange}
                             style={{ color: statusFilter === '' ? '#ffffff' : statusFilter === 'Done' ? '#39b54a' : '#ff0000' }}
                         >
-                            <option value="" className={classes.FilterSelectOption1} onClick={() => setCurrentPage(1)}>Усе</option>
+                            <option value="" className={classes.FilterSelectOption1} onClick={() => setCurrentPage(1)}>Всі завдання</option>
                             <option value="Done" className={classes.FilterSelectOption2} onClick={() => setCurrentPage(1)}>Виконано</option>
                             <option value="Haven't started" className={classes.FilterSelectOption3} onClick={() => setCurrentPage(1)}>Не розпочато</option>
                         </select>
@@ -133,11 +133,11 @@ export const TasksAndStrategy = ({ section4Ref }) => {
                         <thead>
                             {(filterText || statusFilter ? filteredItems : currentItems).length > 0 ?
                                 <tr className={classes.TableTr}>
-                                    <th className={classes.Td}>Назва та опис завдання</th>
-                                    <th className={classes.Td}>Замовник</th>
-                                    <th className={classes.Td}>Сума</th>
-                                    <th className={classes.Td}>Складність</th>
-                                    <th className={classes.Td}>Статус</th>
+                                    <th className={classes.Th}>Назва та опис завдання</th>
+                                    <th className={classes.Th}>Замовник</th>
+                                    <th className={classes.Th}>Сума</th>
+                                    <th className={classes.Th}>Складність</th>
+                                    <th className={classes.Th}>Статус</th>
                                 </tr> : ''}
 
                         </thead>
@@ -165,7 +165,12 @@ export const TasksAndStrategy = ({ section4Ref }) => {
                                             </div>
                                         </td>
                                         <td className={classes.Td}>
-                                            <div className={classes.DescriptionTaskStatus}>{item.taskStatus === "Haven't started" ? 'Не розпочато' : 'Виконано'}</div>
+                                            <div className={classes.DescriptionTaskStatus}>
+                                                <p>{item.taskStatus === "Haven't started" ? 'Не розпочато' : 'Виконано'}</p>
+                                                <p>{Array.from({ length: item.rating }, (_, index) => (
+                                                    <img className={classes.DescriptionRating} key={index} src="/imgHeader/star.png" alt="star" />
+                                                ))}</p>
+                                            </div>
                                         </td>
                                     </tr>
                                 ))
@@ -186,7 +191,7 @@ export const TasksAndStrategy = ({ section4Ref }) => {
                         onClick={() => setCurrentPage(currentPage > 1 ? currentPage - 1 : 1)}
                         disabled={currentPage === 1}
                     >
-                        Prev
+                        <img src="/imgHeader/arrowLeft.png" />
                     </button>
                     {renderPageNumbers()}
                     <button
@@ -194,7 +199,7 @@ export const TasksAndStrategy = ({ section4Ref }) => {
                         onClick={() => setCurrentPage(currentPage < totalPages ? currentPage + 1 : totalPages)}
                         disabled={currentPage >= totalPages}
                     >
-                        Next
+                        <img src="/imgHeader/arrowRight.png" />
                     </button>
                 </div>
             </div>

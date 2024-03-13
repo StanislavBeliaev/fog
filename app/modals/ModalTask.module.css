@@ -40,16 +40,14 @@
 }
 
 .ModalTask {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 155px;
     font-family: 'Montserrat';
     font-size: 18px;
     padding-left: 35px;
     padding-right: 35px;
-    word-wrap: anywhere;
+    overflow: scroll;
 }
+
 
 .ModalClientAmount {
     display: flex;
@@ -94,4 +92,15 @@
 .ModalTaskStatus{
     display: flex;
     flex-direction: column;
+}
+.ModalStarsContainer{
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+.ModalStars{
+    width: 125px;
+    height: 125px;
+    margin: -25px;
 }
