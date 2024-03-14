@@ -45,9 +45,14 @@
     font-size: 18px;
     padding-left: 35px;
     padding-right: 35px;
-    overflow: scroll;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
+.ModalContent::-webkit-scrollbar {
+    display: none;
+}
 
 .ModalClientAmount {
     display: flex;
@@ -74,32 +79,37 @@
     display: flex;
     flex-direction: column;
 }
-.ModalClientText{
+
+.ModalClientText {
     font-family: 'MontserratBold';
     font-size: 22px;
     color: #0567a5;
 }
 
-.ModalAmount{
+.ModalAmount {
     display: flex;
     color: #ffca33;
     width: 100px;
 }
-.ModalComplexity{
+
+.ModalComplexity {
     display: flex;
     flex-direction: column;
 }
-.ModalTaskStatus{
+
+.ModalTaskStatus {
     display: flex;
     flex-direction: column;
 }
-.ModalStarsContainer{
+
+.ModalStarsContainer {
     display: flex;
     height: 100px;
     justify-content: center;
     align-items: center;
 }
-.ModalStars{
+
+.ModalStars {
     width: 125px;
     height: 125px;
     margin: -25px;
