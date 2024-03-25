@@ -111,9 +111,6 @@ export const TasksAndStrategy = ({ section4Ref }) => {
         indexOfLastItem
     );
 
-    console.log(statusFilter)
-    console.log(raceFilter)
-
     return (
         <div ref={section4Ref} className={classes.TasksAndStrategyContainer}>
             <div className={classes.Grid}>
