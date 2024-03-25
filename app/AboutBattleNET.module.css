@@ -19,18 +19,22 @@
 .AboutBattleNETTextContainer{
     display: flex;
     width: 900px;
-    height: 110px;
-    margin: 0 auto;
+    height: 145px;
+    margin-left: 170px;
     justify-content: center;
-    padding-top: 40px;
+    margin-top: 150px;
+    flex-direction: column;
+}
+.Padding{
+    padding-bottom: 45px;
 }
 .AboutBattleNETText{
     font-family: 'Montserrat';
-    color: #ffffff;
+    color: #dedede;
     word-wrap: break-word;
-    width: 762px;
-    font-size: 20px;
-    text-align: center;
+    width: 900px;
+    font-size: 24px;
+
 }
 .TwitchPlayer{
     display: flex;

@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect} from "react";
 import classes from './ModalTask.module.css'
 
 export const ModalWindow = ({ selectedItem, setSelectedItem }) => {
-
     const closeModalOnEsc = (event) => {
         if (event.key === "Escape") {
             setSelectedItem(null);
@@ -57,6 +56,11 @@ export const ModalWindow = ({ selectedItem, setSelectedItem }) => {
                         ))}
                     </div>
                     <button className={classes.CloseButton} onClick={() => setSelectedItem(null)}></button>
+                    {selectedItem.link1 ? <div className={classes.ModalYouTubeButtonContainer}>
+                        <a href={selectedItem.link1}>
+                            <img src="/imgHeader/you-tube-Modal.png" alt=""/>
+                        </a>
+                    </div> : ''}
                 </div>
             </div>
         )

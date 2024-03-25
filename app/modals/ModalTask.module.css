@@ -114,3 +114,8 @@
     height: 125px;
     margin: -25px;
 }
+.ModalYouTubeButtonContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

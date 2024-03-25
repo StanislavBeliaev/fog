@@ -15,7 +15,9 @@ query taskCollectionQuery {
         amount,
         complexity,
         taskStatus,
-              rating
+              rating,
+              race,
+              link1,
       }
     }
   }`;
@@ -27,6 +29,7 @@ export const TasksAndStrategy = ({ section4Ref }) => {
     const [selectedItem, setSelectedItem] = useState(null);
     const [filterText, setFilterText] = useState('');
     const [statusFilter, setStatusFilter] = useState('');
+    const [raceFilter, setRaceFilter] = useState('');
     const containerHeight = 700; // Высота контейнера таблицы
     const rowHeight = 80; // Высота строки таблицы
     const itemsPerPage = Math.floor(containerHeight / rowHeight);
@@ -55,8 +58,13 @@ export const TasksAndStrategy = ({ section4Ref }) => {
 
     const handleStatusFilterChange = (e) => {
         setStatusFilter(e.target.value);
+        setCurrentPage(1)
     };
 
+    const handleRaceFilterChange = (e) => {
+        setRaceFilter(e.target.value);
+        setCurrentPage(1);
+    }
 
 
     const renderPageNumbers = () => {
@@ -96,11 +104,15 @@ export const TasksAndStrategy = ({ section4Ref }) => {
     )
     const filteredItems = dataTasks.taskCollection.items.filter(item =>
         (item.task.toLowerCase().includes(filterText.toLowerCase()) || item.client.toLowerCase().includes(filterText.toLowerCase())) &&
-        (statusFilter === '' || item.taskStatus === statusFilter)
+        ((statusFilter === '' || item.taskStatus === statusFilter) && (raceFilter === '' || item.race === raceFilter))
+
     ).slice(
         indexOfFirstItem,
         indexOfLastItem
     );
+
+    console.log(statusFilter)
+    console.log(raceFilter)
 
     return (
         <div ref={section4Ref} className={classes.TasksAndStrategyContainer}>
@@ -120,6 +132,19 @@ export const TasksAndStrategy = ({ section4Ref }) => {
                         />
                         <select
                             className={classes.FilterSelect}
+                            style={{ color: '#ffffff' }}
+                            onChange={handleRaceFilterChange}
+                            value={raceFilter}
+                        >
+                            <option value="" onClick={() => setCurrentPage(1)}>Всі раси</option>
+                            <option value="Альянс" onClick={() => setCurrentPage(1)}>Альянс</option>
+                            <option value="Орда" onClick={() => setCurrentPage(1)}>Орда</option>
+                            <option value="Неживі" onClick={() => setCurrentPage(1)}>Неживі</option>
+                            <option value="Нічні Ельфи" onClick={() => setCurrentPage(1)}>Нічні Ельфи</option>
+                            <option value="Випадкова" onClick={() => setCurrentPage(1)}>Випадкова</option>
+                        </select>
+                        <select
+                            className={classes.FilterSelect}
                             value={statusFilter}
                             onChange={handleStatusFilterChange}
                             style={{ color: statusFilter === '' ? '#ffffff' : statusFilter === 'Done' ? '#39b54a' : '#ff0000' }}
@@ -131,7 +156,7 @@ export const TasksAndStrategy = ({ section4Ref }) => {
                     </div>
                     <table className={classes.Table}>
                         <thead>
-                            {(filterText || statusFilter ? filteredItems : currentItems).length > 0 ?
+                            {(filterText || statusFilter || raceFilter ? filteredItems : currentItems).length > 0 ?
                                 <tr className={classes.TableTr}>
                                     <th className={classes.Th}>Назва та опис завдання</th>
                                     <th className={classes.Th}>Замовник</th>
@@ -142,8 +167,8 @@ export const TasksAndStrategy = ({ section4Ref }) => {
 
                         </thead>
                         <tbody>
-                            {(filterText || statusFilter ? filteredItems : currentItems).length > 0 ? (
-                                (filterText || statusFilter ? filteredItems : currentItems).map((item, index) => (
+                            {(filterText || statusFilter || raceFilter ? filteredItems : currentItems).length > 0 ? (
+                                (filterText || statusFilter || raceFilter ? filteredItems : currentItems).map((item, index) => (
                                     <tr key={index} className={classes.TableTr}>
                                         <td className={`${classes.Td} ${classes.Description}`} onClick={() => handleItemClick(item)}>
                                             <div className={classes.DescriptionText}>{item.task}</div>

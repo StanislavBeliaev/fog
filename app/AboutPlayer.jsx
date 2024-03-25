@@ -1,5 +1,6 @@
 import React from "react";
 import classes from './aboutPlayer.module.css'
+import { TelegramSVG2 } from "./SocialMediaSVG/SocialMediaSVG";
 export const AboutPlayer = ({ section3Ref: AboutPlayerRef }) => {
     const imgStyle = {
         position: 'absolute',
@@ -11,12 +12,20 @@ export const AboutPlayer = ({ section3Ref: AboutPlayerRef }) => {
     }
     const imgTw = {
         width: '106px',
-        height: '124px'
+        height: '124px',
+        marginLeft: '40px',
+        marginBottom: '5px'
     }
     const imgYt = {
         width: '159px',
         height: '112px',
-        marginLeft: '25px',
+        marginLeft: '60px',
+        marginBottom: '13px'
+    }
+    const imgTG = {
+        width: '128px',
+        height: '127px',
+        marginLeft: '60px',
         marginBottom: '5px'
     }
     const DonateLinksStyle = {
@@ -35,7 +44,8 @@ export const AboutPlayer = ({ section3Ref: AboutPlayerRef }) => {
         { label: "StandWithUkraine, ", link: "https://liquipedia.net/warcraft/Ukrainian_WC3/Season_1" },
         { label: "StandWithUkraine2, ", link: "https://stand-with-ukraine-h3.com.ua/season2" },
         { label: "StandWithUkraine3, ", link: "https://stand-with-ukraine-h3.com.ua/season3" },
-        { label: "StandWithUkraine4, ", link: "https://stand-with-ukraine-h3.com.ua/season4" }
+        { label: "StandWithUkraine4, ", link: "https://stand-with-ukraine-h3.com.ua/season4" },
+        { label: "StandWithUkraine5, ", link: "https://season-5.stand-with-ukraine-h3.com.ua/" }
     ];
 
     return (
@@ -47,15 +57,15 @@ export const AboutPlayer = ({ section3Ref: AboutPlayerRef }) => {
                 <p className={classes.PlayerName}>АНДРІЙ КОРЕНЬ</p>
                 <div className={classes.UlContainer}>
                     <ul className={classes.PlayerFacts}>
-                        <li style={DonateLinksStyle}>Один з найсильніших гравців Warcraft III</li>
-                        <li style={DonateLinksStyle}>Стрімлю рейтингові ігри, знімаю огляди цікавих ігор на Ютуб</li>
-                        <li style={DonateLinksStyle}>Граю професійно турніри</li>
-                        <li style={DonateLinksStyle}>Родом з міста Львів. Зараз проживаю в Сакартвело</li>
+                        <li style={DonateLinksStyle}>Один з найсильніших гравців світу у грі Warcraft III </li>
+                        <li style={DonateLinksStyle}>Родом з міста Львів</li>
+                        <li style={DonateLinksStyle}>Граю у форматі: виконання завдань від глядачів</li>
+                        <li style={DonateLinksStyle}>Проводжу трансляції на Twitch.TV та YouTube</li>
                     </ul>
                 </div>
                 <img style={imgStyle} src="/imgHeader/foggy-pic.webp" alt="" />
                 <div className={classes.StreamLinkTextContainer}>
-                    <p className={classes.StreamLinkText}>СТРІМ ТА ЗАПИСИ </p>
+                    <p className={classes.StreamLinkText}>СТРІМ, ЗАПИСИ, АНОНСИ </p>
                 </div>
                 <div className={classes.StreamLinks}>
                     <a href="https://www.twitch.tv/foggywc3" target="_blank">
@@ -63,6 +73,9 @@ export const AboutPlayer = ({ section3Ref: AboutPlayerRef }) => {
                     </a>
                     <a href="https://www.youtube.com/foggywc3" target="_blank">
                         <img style={imgYt} src="/imgHeader/yt.svg" alt="" />
+                    </a>
+                    <a href="https://t.me/+XIxzoTY3jvNjNzcy" target="_blank">
+                        <TelegramSVG2 style={imgTG} />
                     </a>
                 </div>
                 <div className={classes.HelpUkraineTextContainer}>
