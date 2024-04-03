@@ -15,7 +15,7 @@ a{
   color: #ffca33;
   text-decoration: underline;
 }
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1920px){
   body{
     width: 1920px;
   }

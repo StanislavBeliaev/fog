@@ -45,7 +45,7 @@ export const Header = ({ section1Ref, section2Ref, section3Ref, section4Ref: Tas
 
                     <HeaderButton onClick={() => scrollToSection(TaskAndStrategyRef)} className={classes.Button}><p>ЗАВДАННЯ-СТРАТЕГІЇ</p></HeaderButton>
 
-                    {<HeaderButton /* onClick={() => scrollToSection(section3Ref)}*/ className={classes.Button}><p>ЗАМОВИТИ ЗАВДАННЯ</p></HeaderButton>}
+                    {<HeaderButton onClick={() => redirectToDonation()} className={classes.Button}><p>ЗАМОВИТИ ЗАВДАННЯ</p></HeaderButton>}
                 </div>
             </div>
         </div>
