@@ -30,30 +30,34 @@ export const TasksAndStrategy = ({ section4Ref }) => {
     const [filterText, setFilterText] = useState('');
     const [statusFilter, setStatusFilter] = useState('');
     const [raceFilter, setRaceFilter] = useState('');
-    const containerHeight = 700; // Высота контейнера таблицы
-    const rowHeight = 80; // Высота строки таблицы
+    const [totalPages, setTotalPages] = useState(1)
+    const containerHeight = 700;
+    const rowHeight = 80;
     const itemsPerPage = Math.floor(containerHeight / rowHeight);
 
+    useEffect(() => {
+        if (dataTasks) {
+            const totalItems = filteredItems.length; // Поскольку у нас всегда применяется какой-то фильтр, мы всегда берем значения фильтра
+            const totalPages = Math.ceil(totalItems / itemsPerPage);
+            setTotalPages(totalPages);
+        }
 
-
+    }, [dataTasks, filterText, statusFilter, raceFilter, itemsPerPage]);
 
     if (errors) return <span>{errors.map(error => error.message).join(',')}</span>
     if (!dataTasks) return <span>Loading ...</span>
-
-    const totalItems = dataTasks.taskCollection.items.length;
-    const totalPages = Math.ceil(totalItems / itemsPerPage);
 
     const handlePageChange = (page) => {
         setCurrentPage(page);
     };
 
     const handleItemClick = (item) => {
-        setSelectedItem(item); // Обновляем состояние выбранного элемента при нажатии на ячейку
+        setSelectedItem(item);
     };
 
     const handleFilterTextChange = (e) => {
         setFilterText(e.target.value);
-        setCurrentPage(1)
+        setCurrentPage(1);
     };
 
     const handleStatusFilterChange = (e) => {
@@ -106,7 +110,8 @@ export const TasksAndStrategy = ({ section4Ref }) => {
         (item.task.toLowerCase().includes(filterText.toLowerCase()) || item.client.toLowerCase().includes(filterText.toLowerCase())) &&
         ((statusFilter === '' || item.taskStatus === statusFilter) && (raceFilter === '' || item.race === raceFilter))
 
-    ).slice(
+    );
+    const filteredItemsSlice = filteredItems.slice(
         indexOfFirstItem,
         indexOfLastItem
     );
@@ -153,7 +158,7 @@ export const TasksAndStrategy = ({ section4Ref }) => {
                     </div>
                     <table className={classes.Table}>
                         <thead>
-                            {(filterText || statusFilter || raceFilter ? filteredItems : currentItems).length > 0 ?
+                            {(filterText || statusFilter || raceFilter ? filteredItemsSlice : currentItems).length > 0 ?
                                 <tr className={classes.TableTr}>
                                     <th className={classes.Th}>Назва та опис завдання</th>
                                     <th className={classes.Th}>Замовник</th>
@@ -164,8 +169,8 @@ export const TasksAndStrategy = ({ section4Ref }) => {
 
                         </thead>
                         <tbody>
-                            {(filterText || statusFilter || raceFilter ? filteredItems : currentItems).length > 0 ? (
-                                (filterText || statusFilter || raceFilter ? filteredItems : currentItems).map((item, index) => (
+                            {(filterText || statusFilter || raceFilter ? filteredItemsSlice : currentItems).length > 0 ? (
+                                (filterText || statusFilter || raceFilter ? filteredItemsSlice : currentItems).map((item, index) => (
                                     <tr key={index} className={classes.TableTr}>
                                         <td className={`${classes.Td} ${classes.Description}`} onClick={() => handleItemClick(item)}>
                                             <div className={classes.DescriptionText}>{item.task}</div>
@@ -209,15 +214,17 @@ export const TasksAndStrategy = ({ section4Ref }) => {
             <div className={classes.paginationContainer}>
                 <div className={classes.PaginationButtonContainer}>
                     <button
-                        className={classes.PaginationButton}
+                        className={classes.PaginationArrows}
                         onClick={() => setCurrentPage(currentPage > 1 ? currentPage - 1 : 1)}
                         disabled={currentPage === 1}
                     >
                         <img src="/imgHeader/arrowLeft.png" />
                     </button>
-                    {renderPageNumbers()}
+                    <div className={classes.PaginationButton}>
+                        {renderPageNumbers()}
+                    </div>
                     <button
-                        className={classes.PaginationButton}
+                        className={classes.PaginationArrows}
                         onClick={() => setCurrentPage(currentPage < totalPages ? currentPage + 1 : totalPages)}
                         disabled={currentPage >= totalPages}
                     >

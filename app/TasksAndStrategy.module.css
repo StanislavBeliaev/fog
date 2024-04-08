@@ -161,13 +161,18 @@
     color:#ffca33;
 }
 
-.PaginationButton {
+.PaginationArrows {
     background: transparent;
     background-image: url('/imgHeader/ActiveButton.png');
     background-size: cover;
     width: 54px;
     height: 52px;
     border: none;
+}
+.PaginationButton{
+    display: flex;
+    justify-content: flex-start;
+    width: 72%;
 }
 
 .PaginationButtonContainer {

@@ -1,24 +1,35 @@
-import React, { useEffect} from "react";
-import classes from './ModalTask.module.css'
+import React, { useEffect, useRef } from "react";
+import classes from './ModalTask.module.css';
 
 export const ModalWindow = ({ selectedItem, setSelectedItem }) => {
+    const modalRef = useRef(null);
+
     const closeModalOnEsc = (event) => {
         if (event.key === "Escape") {
             setSelectedItem(null);
         }
     };
 
+    const closeModalOnClickOutside = (event) => {
+        if (modalRef.current && !modalRef.current.contains(event.target)) {
+            setSelectedItem(null);
+        }
+    };
+
     useEffect(() => {
         document.addEventListener("keydown", closeModalOnEsc);
+        document.addEventListener("mousedown", closeModalOnClickOutside);
+
         return () => {
             document.removeEventListener("keydown", closeModalOnEsc);
+            document.removeEventListener("mousedown", closeModalOnClickOutside);
         };
     }, []);
 
     return (
         selectedItem && (
             <div className={classes.Modal} onKeyDown={closeModalOnEsc}>
-                <div className={classes.ModalContent}>
+                <div ref={modalRef} className={classes.ModalContent}>
                     <div className={classes.ModalName}>
                         <p>Назва та опис завдання</p>
                     </div>
@@ -58,7 +69,7 @@ export const ModalWindow = ({ selectedItem, setSelectedItem }) => {
                     <button className={classes.CloseButton} onClick={() => setSelectedItem(null)}></button>
                     {selectedItem.link1 ? <div className={classes.ModalYouTubeButtonContainer}>
                         <a href={selectedItem.link1}>
-                            <img src="/imgHeader/you-tube-Modal.png" alt=""/>
+                            <img src="/imgHeader/you-tube-Modal.png" alt="" />
                         </a>
                     </div> : ''}
                 </div>
