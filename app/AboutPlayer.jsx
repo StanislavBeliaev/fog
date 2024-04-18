@@ -63,7 +63,9 @@ export const AboutPlayer = ({ section3Ref: AboutPlayerRef }) => {
                         <li style={DonateLinksStyle}>Проводжу трансляції на Twitch.TV та YouTube</li>
                     </ul>
                 </div>
-                <img style={imgStyle} src="/imgHeader/foggy-pic.webp" alt="" />
+                <div className={classes.PlayerPhotoContainer}>
+                {/* container for photo  */}
+                </div>
                 <div className={classes.StreamLinkTextContainer}>
                     <p className={classes.StreamLinkText}>СТРІМ, ЗАПИСИ, АНОНСИ </p>
                 </div>

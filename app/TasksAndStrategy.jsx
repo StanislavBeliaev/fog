@@ -5,13 +5,11 @@ import useContentful from "./hooks/use-contentful";
 import { ModalWindow } from "./modals/ModalTask";
 const query = `
 query taskCollectionQuery {
-    taskCollection {
+    taskCollection(limit:1000) {
       items {
-        sys{
-            id
-          }
         task,
         client,
+        vip,
         amount,
         complexity,
         taskStatus,
@@ -115,7 +113,6 @@ export const TasksAndStrategy = ({ section4Ref }) => {
         indexOfFirstItem,
         indexOfLastItem
     );
-
     return (
         <div ref={section4Ref} className={classes.TasksAndStrategyContainer}>
             <div className={classes.Grid}>
@@ -173,10 +170,19 @@ export const TasksAndStrategy = ({ section4Ref }) => {
                                 (filterText || statusFilter || raceFilter ? filteredItemsSlice : currentItems).map((item, index) => (
                                     <tr key={index} className={classes.TableTr}>
                                         <td className={`${classes.Td} ${classes.Description}`} onClick={() => handleItemClick(item)}>
-                                            <div className={classes.DescriptionText}>{item.task}</div>
+                                            <div className={classes.DescriptionTextContainer}>
+                                                <div className={classes.DescriptionImg}>
+                                                    {item.vip ? <img className={classes.DescriptionStatus} src="/imgHeader/iconVip.png" />
+                                                        :
+                                                        <img className={classes.DescriptionStatus} src="/imgHeader/iconTask.png" />}
+                                                </div>
+                                                <div className={classes.DescriptionText}>
+                                                    {item.task}
+                                                </div>
+                                            </div>
                                         </td>
                                         <td className={classes.Td}>
-                                            <div className={classes.DescriptionClient}>{item.client}</div>
+                                            <div className={classes.DescriptionClient}>{item.client.length > 9 ? `${item.client.slice(0,7)}...` : item.client}</div>
                                         </td>
                                         <td className={classes.Td}>
                                             <div className={classes.DescriptionAmount}>{item.amount + ' грн'}</div>

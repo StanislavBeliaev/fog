@@ -4,7 +4,16 @@
     max-height: 1522px;
     display: flex;
 }
-
+.PlayerPhotoContainer{
+    background-image: url('/imgHeader/foggyAbout.png');
+    position: absolute;
+    width: 850px;
+    height: 1150px;
+    top: 1180px;
+    left: 1050px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 .Grid {
     width: 1140px;
     margin: 0 auto;

@@ -14,6 +14,13 @@
     height: 682px;
 }
 
+.BackgroundImage {
+    display: none;
+}
+
+.BackgroundLoaded {
+    background-image: url('/imgHeader/bg-modal.png');
+}
 
 .CloseButton {
     position: absolute;
@@ -39,6 +46,10 @@
     align-items: center;
 }
 
+.ModalNameStatus{
+    padding-right: 10px;
+}
+
 .ModalTask {
     height: 155px;
     font-family: 'Montserrat';
@@ -60,8 +71,8 @@
     height: 100px;
     align-items: center;
     font-family: 'MontserratBold';
-    padding-left: 115px;
-    padding-right: 115px;
+    padding-left: 52px;
+    padding-right: 52px;
     margin-top: 26px;
 }
 
@@ -71,8 +82,8 @@
     height: 110px;
     align-items: center;
     font-family: 'MontserratBold';
-    padding-left: 115px;
-    padding-right: 115px;
+    padding-left: 54px;
+    padding-right: 54px;
 }
 
 .ModalClient {
@@ -84,6 +95,7 @@
     font-family: 'MontserratBold';
     font-size: 22px;
     color: #0567a5;
+    width: 200px;
 }
 
 .ModalAmount {
@@ -95,11 +107,13 @@
 .ModalComplexity {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .ModalTaskStatus {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .ModalStarsContainer {
@@ -118,4 +132,43 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.ModalClientContainer{
+    display: flex;
+}
+.ModalClientFaceContainer{
+    display: flex;
+    align-items: center;
+    width: 180px;
+}
+.ModalClientFaceImg{
+    display: flex;
+    padding-right: 10px;
+}
+.ModalClientCoinContaienr{
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+.ModalClientCoinIng{
+    display: flex;
+    padding-right: 10px;
+}
+.ModalClientAmountText{
+    width: 200px;
+}
+.ModalComplexityTaskStatusContainer{
+    display: flex;
+    width: 250px;
+}
+.ModalComplexityTaskStatusImg{
+    display: flex;
+    padding-right: 10px;
+}
+.ModalTaskStatusContainer{
+    display: flex;
+    width: 200px;
+}
+.ModalTaskStatusImg{
+    padding-right: 10px;
 }
