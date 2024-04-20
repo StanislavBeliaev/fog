@@ -9,7 +9,7 @@ export const AboutBattleNET = ({ section2Ref: AboutBattleNETRef }) => {
         fontSize: '24px',
         color: '#dedede',
     }
-    const embedId = 'z6oMZUsZ648'
+    const embedId = 'LR23ZFVehf0'
     return (
         <div ref={AboutBattleNETRef} className={classes.AboutBattleNETContainer}>
             <div className={classes.Grid}>
