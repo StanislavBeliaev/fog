@@ -4,7 +4,9 @@
     background-image: url('/imgHeader/FooterBackground.png');
     height: 280px;
     padding: 20px; /* Добавим небольшой отступ от краев */
-    box-sizing: border-box; /* Учтем внутренние отступы при вычислении общей ширины */
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 .Grid {

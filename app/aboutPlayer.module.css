@@ -5,19 +5,21 @@
     display: flex;
 }
 .PlayerPhotoContainer{
-    background-image: url('/imgHeader/foggyAbout.png');
+    display: flex;
+}
+.PlayerPhoto{
     position: absolute;
-    width: 850px;
-    height: 1150px;
-    top: 1180px;
-    left: 1050px;
-    background-size: contain;
-    background-repeat: no-repeat;
+    margin-left: 55%;
+    margin-top: 208px;
+    height: 1123px;
+    width: 766px;
+    z-index: 0;
 }
 .Grid {
     width: 1140px;
     margin: 0 auto;
-}
+    z-index: 1;
+} 
 
 .Heading {
     color: #ffffff;

@@ -63,9 +63,6 @@ export const AboutPlayer = ({ section3Ref: AboutPlayerRef }) => {
                         <li style={DonateLinksStyle}>Проводжу трансляції на Twitch.TV та YouTube</li>
                     </ul>
                 </div>
-                <div className={classes.PlayerPhotoContainer}>
-                {/* container for photo  */}
-                </div>
                 <div className={classes.StreamLinkTextContainer}>
                     <p className={classes.StreamLinkText}>СТРІМ, ЗАПИСИ, АНОНСИ </p>
                 </div>
@@ -102,7 +99,7 @@ export const AboutPlayer = ({ section3Ref: AboutPlayerRef }) => {
                     </div>
                 </div>
             </div>
-
+                <img className={classes.PlayerPhoto} src="/imgHeader/foggyAbout.png" alt="" />
         </div>
     )
 }
